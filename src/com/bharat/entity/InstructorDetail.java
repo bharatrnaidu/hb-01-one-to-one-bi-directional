@@ -19,6 +19,12 @@ public class InstructorDetail
     
     @Column(name="hobby")
     private String hobby;
+    
+    // Step 1.1: New field to refer Instructor:
+    // Step 1.3: Add @OneToOne annotation:
+    // Note: Below code refers to "instructorDetail" property in "Instructor" class
+    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    private Instructor instructor;
 
     // create constructors.
     public InstructorDetail(String youtubeChannel, String hobby) {
@@ -31,6 +37,15 @@ public class InstructorDetail
     }
     
     // generate getter/setter methods.
+    // Step 1.2: Add getter and setter for Instructor:
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
+    }
+    
     public int getId() {
         return id;
     }
