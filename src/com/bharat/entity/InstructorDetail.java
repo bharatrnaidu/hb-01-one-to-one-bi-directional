@@ -23,7 +23,14 @@ public class InstructorDetail
     // Step 1.1: New field to refer Instructor:
     // Step 1.3: Add @OneToOne annotation:
     // Note: Below code refers to "instructorDetail" property in "Instructor" class
-    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    // 		 And all type of cascading is supported..
+    /* 
+     	@OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+		private Instructor instructor;
+    */
+    
+    // In Below annotation cascade delete will not work other cascades will work.
+    @OneToOne(mappedBy = "instructorDetail", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Instructor instructor;
 
     // create constructors.

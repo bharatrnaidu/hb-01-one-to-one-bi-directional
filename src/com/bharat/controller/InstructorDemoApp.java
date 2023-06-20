@@ -23,9 +23,9 @@ public class InstructorDemoApp {
 	try 
 	{
 	    // Create the objects.
-	    Instructor tempInstructor = new Instructor("Madhu", "Patel", "madhu@luv2code.com");
+	    Instructor tempInstructor = new Instructor("Balaji", "Gowda", "balaji@bharat.in");
 	    
-	    InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.madhuplayer.com/youtube", "Guitar");
+	    InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.BalajiRoadways.com/youtube", "Constructing Roads");
 	    
 	    // associate the objects.
 	    tempInstructor.setInstructorDetail(tempInstructorDetail);
